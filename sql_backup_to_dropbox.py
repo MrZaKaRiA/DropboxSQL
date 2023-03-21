@@ -33,7 +33,7 @@ def upload_to_dropbox(dropbox_access_token, backup_file_path, remote_file_path):
 
 def main():
     databases = get_databases()
-    timestamp = time.strftime('%Y%m%d%H%M%S')
+    timestamp = time.strftime('%Y-%m-%d-%H:%M:%S')
 
     # Create timestamp folder in the backup directory
     timestamp_folder = os.path.join(backup_dir, timestamp)
