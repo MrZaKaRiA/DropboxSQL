@@ -10,7 +10,43 @@ sudo apt install python3
 ```
 2. A Dropbox account with an access token. To create an access token, follow the [official Dropbox documentation](https://www.dropbox.com/developers/reference/oauth-guide).
 
+
+    # Create a Dropbox App with Write Permissions
+
+    This guide will show you how to create a Dropbox app and give it write permissions.
+
+    ## Prerequisites
+
+    1. A Dropbox account. If you don't have one, sign up at [https://www.dropbox.com](https://www.dropbox.com).
+
+    ## Steps
+
+    1. Visit the Dropbox App Console at [https://www.dropbox.com/developers/apps/create](https://www.dropbox.com/developers/apps/create).
+
+    2. Select the type of access your app will need:
+       - **Scoped access**: Choose this option for more granular control over app permissions.
+       - **Full dropbox**: Choose this option if your app needs access to all files and folders in your Dropbox.
+
+    3. Enter a unique name for your app in the "App name" field.
+
+    4. Click the "Create App" button.
+
+    5. Once your app is created, you'll be redirected to the app's settings page. Here, you can manage your app's settings and permissions.
+
+    6. In the "OAuth 2" section, click the "Generate" button to create an access token. This token will be used to authenticate your app with Dropbox. Make sure to keep this token secure, as it grants access to your Dropbox account.
+
+    7. To set write permissions, go to the "Permissions" tab on the app's settings page.
+
+    8. Scroll through the list of permissions and enable the ones your app requires for writing. For example, if your app needs to write files and folders, enable the `files.metadata.write`, `files.content.write`, and `files.metadata.read` permissions.
+
+    9. Click the "Submit" button at the bottom of the page to save your changes.
+
+    Your Dropbox app is now set up with write permissions. Use the generated access token to authenticate with the Dropbox API in your application.
+
+
+
 3. MySQL or MariaDB installed on your system.
+
 
 ## Setup
 
